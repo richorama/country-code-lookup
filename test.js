@@ -3,61 +3,75 @@ var countries = require('./index.js');
 describe('country code', function(){
 
 	it('loads the countries into an array', function(done){
-		if (countries.countries.length !== 237) done("not all countries loaded");
-		done();
+		if (countries.countries.length !== 237) return done('not all countries loaded');
+		return done();
 	});
 
 	it('finds countries by fips', function(done){
 		var uk = countries.byFips('UK');
-		if (!uk) done('no country');
-		if (uk.country !== 'United Kingdom') done('wrong country');
-		if (uk.continent !== "Europe") done("wrong continent");
-		if (uk.region !== "Western Europe") done("wrong region");
-		if (uk.capital !== "London") done("wrong capital");
-		done();
+		if (!uk) return done('no country');
+		if (uk.country !== 'United Kingdom') return done('wrong country');
+		if (uk.continent !== 'Europe') return done('wrong continent');
+		if (uk.region !== 'Western Europe') return done('wrong region');
+		if (uk.capital !== 'London') return done('wrong capital');
+		return done();
 	});
 
 	it('finds countries by iso 2', function(done){
 		var uk = countries.byIso('GB');
-		if (!uk) done('no country');
-		if (uk.country !== 'United Kingdom') done('wrong country');
-		done();
+		if (!uk) return done('no country');
+		if (uk.country !== 'United Kingdom') return done('wrong country');
+		return done();
 	});
 
 	it('finds countries by iso 3', function(done){
 		var uk = countries.byIso('GBR');
-		if (!uk) done('no country');
-		if (uk.country !== 'United Kingdom') done('wrong country');
-		done();
+		if (!uk) return done('no country');
+		if (uk.country !== 'United Kingdom') return done('wrong country');
+		return done();
 	});
 
 	it('finds countries by iso number', function(done){
 		var uk = countries.byIso(826);
-		if (!uk) done('no country');
-		if (uk.country !== 'United Kingdom') done('wrong country');
-		done();
+		if (!uk) return done('no country');
+		if (uk.country !== 'United Kingdom') return done('wrong country');
+		return done();
 	});
-
 
 	it('finds countries by iso number as a string', function(done){
 		var uk = countries.byIso('826');
-		if (!uk) done('no country');
-		if (uk.country !== 'United Kingdom') done('wrong country');
-		done();
+		if (!uk) return done('no country');
+		if (uk.country !== 'United Kingdom') return done('wrong country');
+		return done();
 	});
 
 	it('finds countries by internet code', function(done){
 		var uk = countries.byInternet('UK');
-		if (!uk) done('no country');
-		if (uk.country !== 'United Kingdom') done('wrong country');
-		done();
+		if (!uk) return done('no country');
+		if (uk.country !== 'United Kingdom') return done('wrong country');
+		return done();
 	});
 
 	it('finds countries by lower case fips', function(done){
 		var uk = countries.byFips('uk');
-		if (!uk) done('no country');
-		if (uk.country !== 'United Kingdom') done('wrong country');
-		done();
+		if (!uk) return done('no country');
+		if (uk.country !== 'United Kingdom') return done('wrong country');
+		return done();
+	});
+
+	it('throws an error if the iso code is invalid', function(done){
+		try { 
+			var uk = countries.byIso('foo bar baz');
+			return done('exception should be thrown');
+		} catch (e){
+			return done()
+		}
+	});
+
+	it('returns null if no country is found', function(done){
+		var uk = countries.byIso(23452);
+		if (uk === null) return done();
+		return done('country should be null');
 	});
 
 });
