@@ -1,0 +1,26 @@
+{
+  "name": "country-code-lookup",
+  "version": "0.0.0",
+  "description": "Finds countries by various country codes",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/richorama/country-code-lookup.git"
+  },
+  "keywords": [
+    "fips",
+    "iso",
+    "country",
+    "code",
+    "countries"
+  ],
+  "author": "Richard Astbury",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/richorama/country-code-lookup/issues"
+  },
+  "homepage": "https://github.com/richorama/country-code-lookup"
+}
