@@ -2,8 +2,9 @@
 var countries = [];
 
 function load(){
-	var data = require('fs').readFileSync('country-codes.csv').toString().split('\r\n');
-	
+	var path = require('path');
+	var data = require('fs').readFileSync(path.join(__dirname, 'country-codes.csv')).toString().split('\r\n');
+		
 	var headings = data[0].split(',');
 
 	for (var i = 1; i < data.length; i++){
