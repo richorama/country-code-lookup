@@ -30,7 +30,7 @@ lookpup.byIso('GBR');
 lookpup.byIso(826);
 
 // search by internet code
-lookpup.byIso('UK');
+lookpup.byInternet('UK');
 
 // get an array of all countries
 lookup.countries
