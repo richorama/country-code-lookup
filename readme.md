@@ -1,6 +1,6 @@
 # Country Code Lookup
 
-Finds countries by various country codes.
+A node.js module to look up countries by various country codes.
 
 Supported codes:
 
@@ -27,7 +27,7 @@ lookup.byFips('UK');
 // search by ISO
 lookpup.byIso('GB');
 lookpup.byIso('GBR');
-lookpup.byIso('826');
+lookpup.byIso(826);
 
 // search by internet code
 lookpup.byIso('UK');
