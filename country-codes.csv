@@ -124,7 +124,7 @@ Asia,South East Asia,Malaysia,Kuala Lumpur,MY,MY,MYS,458,MY
 Asia,South Asia,Maldives,Male (Maale),MV,MV,MDV,462,MV
 Africa,Western Africa,Mali,Bamako,ML,ML,MLI,466,ML
 Europe,Southern Europe,Malta,Valletta,MT,MT,MLT,470,MT
-Europe,Western Europe,Isle of Man,Douglas,--,--,--,,--
+Europe,Western Europe,Isle of Man,Douglas,IM,IM,IMN,833,IM
 Oceania,Pacific,Marshall Islands,Majuro,RM,MH,MHL,584,MH
 Americas,West Indies,Martinique,Fort-de-France,MB,MQ,MTQ,474,MQ
 Africa,Western Africa,Mauritania,Nouakchott,MR,MR,MRT,478,MR
@@ -156,7 +156,7 @@ Europe,Northern Europe,Norway,Oslo,NO,NO,NOR,578,NO
 Asia,South West Asia,Oman,Muscat,MU,OM,OMN,512,OM
 Asia,South Asia,Pakistan,Islamabad,PK,PK,PAK,586,PK
 Oceania,Pacific,Palau,Koror,PS,PW,PLW,585,PW
-Asia,South West Asia,Palestine,,--,--,--,,--
+Asia,South West Asia,Palestinian Territory,East Jerusalem,WE,PS,PSE,275,PS
 Americas,Central America,Panama,Panama,PM,PA,PAN,591,PA
 Oceania,Pacific,Papua New Guinea,Port Moresby,PP,PG,PNG,598,PG
 Americas,South America,Paraguay,Asuncion,PA,PY,PRY,600,PY
