@@ -11,7 +11,7 @@ function load(){
 		var parts = data[i].split(',');
 		var country = {};
 		for (var j = 0; j < headings.length; j++){
-			country[headings[j]] = parts[j].trim();
+			country[headings[j].trim()] = parts[j].trim();
 		}
 		countries.push(country);
 	}
@@ -35,7 +35,7 @@ module.exports.byIso = function(code){
 
 	if (code.length === 3){
 		return search('iso3', code.toUpperCase());
-	} 
+	}
 
 	throw new Error("cannot determine ISO code type");
 }
@@ -52,4 +52,3 @@ function search(field, code){
 	}
 	return null;
 }
-
