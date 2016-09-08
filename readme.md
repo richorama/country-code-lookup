@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/richorama/country-code-lookup.svg?branch=master)](https://travis-ci.org/richorama/country-code-lookup)
+
 # Country Code Lookup
 
 A node.js module to look up countries by various country codes.
@@ -53,4 +55,3 @@ Searching for a country will return either null, or a country object:
 ## License
 
 MIT
-
