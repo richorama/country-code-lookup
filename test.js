@@ -3,7 +3,7 @@ var countries = require('./index.js');
 describe('country code', function(){
 
 	it('loads the countries into an array', function(done){
-		if (countries.countries.length !== 237) return done('not all countries loaded');
+		if (countries.countries.length !== 238) return done('not all countries loaded');
 		return done();
 	});
 
@@ -60,7 +60,7 @@ describe('country code', function(){
 	});
 
 	it('throws an error if the iso code is invalid', function(done){
-		try { 
+		try {
 			var uk = countries.byIso('foo bar baz');
 			return done('exception should be thrown');
 		} catch (e){
