@@ -8,6 +8,7 @@ function load(){
 	var headings = data[0].split(',');
 
 	for (var i = 1; i < data.length; i++){
+		if (!data[i]) continue;
 		var parts = data[i].split(',');
 		var country = {};
 		for (var j = 0; j < headings.length; j++){

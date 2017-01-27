@@ -3,7 +3,7 @@ var countries = require('./index.js');
 describe('country code', function(){
 
 	it('loads the countries into an array', function(done){
-		if (countries.countries.length !== 238) return done('not all countries loaded');
+		if (countries.countries.length < 239) return done('not all countries loaded, found ' + countries.countries.length);
 		return done();
 	});
 
