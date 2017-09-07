@@ -46,7 +46,7 @@ module.exports.byInternet = function(code){
 }
 
 function search(field, code){
-	for (i = 0; i < countries.length; i++){
+	for (var i = 0; i < countries.length; i++){
 		if (countries[i][field] === code){
 			return countries[i];
 		}
