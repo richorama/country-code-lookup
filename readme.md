@@ -27,12 +27,12 @@ var lookup = require('country-code-lookup');
 lookup.byFips('UK');
 
 // search by ISO
-lookpup.byIso('GB');
-lookpup.byIso('GBR');
-lookpup.byIso(826);
+lookup.byIso('GB');
+lookup.byIso('GBR');
+lookup.byIso(826);
 
 // search by internet code
-lookpup.byInternet('UK');
+lookup.byInternet('UK');
 
 // get an array of all countries
 lookup.countries
