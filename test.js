@@ -74,4 +74,15 @@ describe('country code', function(){
 		return done('country should be null');
 	});
 
+
+	it('Romania is now ROU', function(done){
+		var romania = countries.byIso('ROM');
+		if (null !== romania) return done('Romania is no longer ROM');
+
+		var romania = countries.byIso('ROU');
+		if (null === romania) return done('Romania is now ROU');
+		done();
+
+	});
+
 });
