@@ -2457,7 +2457,7 @@ var countries = [
 	  "region": "South East Asia",
 	  "country": "Vietnam",
 	  "capital": "Hanoi",
-	  "fips": "VM",
+	  "fips": "VN",
 	  "iso2": "VN",
 	  "iso3": "VNM",
 	  "isoNo": "704",

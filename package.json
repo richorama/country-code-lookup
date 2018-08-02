@@ -1,10 +1,10 @@
 {
   "name": "country-code-lookup",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Finds countries by various country codes",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/richorama/country-code-lookup/issues"
   },
-  "homepage": "https://github.com/richorama/country-code-lookup"
+  "homepage": "https://github.com/richorama/country-code-lookup",
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  }
 }
