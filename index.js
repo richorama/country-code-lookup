@@ -2660,6 +2660,17 @@ var countries = [
 	  "iso3": "GGY",
 	  "isoNo": "831",
 	  "internet": "GG"
+	},
+	{
+	  "continent": "Europe",
+		"region": "South East Europe",
+		"country": "Serbia",
+	  "capital": "Belgrade",
+	  "fips": "RI",
+	  "iso2": "RS",
+	  "iso3": "SRB",
+	  "isoNo": "688",
+	  "internet": "RS"
 	}
 ];
 
