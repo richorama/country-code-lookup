@@ -85,4 +85,15 @@ describe('country code', function(){
 
 	});
 
+	it('Democratic Republic of Congo', function(done){
+		var drcongo = countries.byIso('COD');
+		if (null == drcongo) return done('Democratic Republic of Congo is COD');
+
+		var drcongo = countries.byIso('CD');
+		if (null == drcongo) return done('Democratic Republic of Congo is CD');
+
+		done();
+
+	});
+
 });
