@@ -52,6 +52,10 @@ Searching for a country will return either null, or a country object:
   internet: 'UK' }
 ````
 
+## Useful Links
+
+ISO 2 and 3 digit country codes: https://www.iban.com/country-codes
+
 ## License
 
 MIT
