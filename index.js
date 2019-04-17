@@ -2671,6 +2671,116 @@ var countries = [
     iso3: 'SRB',
     isoNo: '688',
     internet: 'RS'
+  },
+  {
+    continent: 'Americas',
+    region: 'West Indies',
+    country: 'Saint Barthélemy',
+    capital: 'Gustavia',
+    fips: 'TB',
+    iso2: 'BL',
+    iso3: 'BLM',
+    isoNo: '652',
+    internet: 'BL'
+  },
+  {
+    continent: 'Europe',
+    region: 'South East Europe',
+    country: 'Montenegro',
+    capital: 'Podgorica',
+    fips: 'MJ',
+    iso2: 'ME',
+    iso3: 'MNE',
+    isoNo: '499',
+    internet: 'ME'
+  },
+  {
+    continent: 'Europe',
+    region: 'Western Europe',
+    country: 'Jersey',
+    capital: 'Saint Helier',
+    fips: 'JE',
+    iso2: 'JE',
+    iso3: 'JEY',
+    isoNo: '832',
+    internet: 'JE'
+  },
+  {
+    continent: 'Americas',
+    region: 'West Indies',
+    country: 'Curaçao',
+    capital: 'Willemstad',
+    fips: 'UC',
+    iso2: 'CW',
+    iso3: 'CUW',
+    isoNo: '531',
+    internet: 'CW'
+  },
+  {
+    continent: 'Americas',
+    region: 'West Indies',
+    country: 'Saint Martin',
+    capital: 'Marigot',
+    fips: 'RN',
+    iso2: 'MF',
+    iso3: 'MAF',
+    isoNo: '663',
+    internet: 'MF'
+  },
+  {
+    continent: 'Americas',
+    region: 'West Indies',
+    country: 'Sint Maarten',
+    capital: 'Philipsburg',
+    fips: 'NN',
+    iso2: 'SX',
+    iso3: 'SXM',
+    isoNo: '534',
+    internet: 'SX'
+  },
+  {
+    continent: 'Asia',
+    region: 'South East Asia',
+    country: 'Timor-Leste',
+    capital: 'Dili',
+    fips: 'TT',
+    iso2: 'TL',
+    iso3: 'TLS',
+    isoNo: '626',
+    internet: 'TL'
+  },
+  {
+    continent: 'Africa',
+    region: 'Northern Africa',
+    country: 'South Sudan',
+    capital: 'Juba',
+    fips: 'OD',
+    iso2: 'SS',
+    iso3: 'SSD',
+    isoNo: '728',
+    internet: 'SS'
+  },
+  {
+    continent: 'Europe',
+    region: 'Northern Europe',
+    country: 'Åland Islands',
+    capital: 'Mariehamn',
+    fips: 'AX',
+    iso2: 'AX',
+    iso3: 'ALA',
+    isoNo: '248',
+    internet: 'AX'
+  },
+  {
+    continent: 'Americas',
+    region: 'West Indies',
+    country: 'Bonaire',
+    capital: 'Kralendijk',
+    fips: 'BQ',
+    iso2: 'BQ',
+    iso3: 'BES',
+    isoNo: '535',
+    internet: 'BQ'
   }
 ]
 
