@@ -40,6 +40,16 @@ describe('country code', function() {
     return done()
   })
 
+  it('finds countries by country name', function(done) {
+    var uk = countries.byCountry('United Kingdom')
+    if (!uk) return done('no country')
+    if (uk.country !== 'United Kingdom') return done('wrong country')
+    if (uk.continent !== 'Europe') return done('wrong continent')
+    if (uk.region !== 'Western Europe') return done('wrong region')
+    if (uk.capital !== 'London') return done('wrong capital')
+    return done()
+  })
+
   it('finds countries by iso number as a string', function(done) {
     var uk = countries.byIso('826')
     if (!uk) return done('no country')

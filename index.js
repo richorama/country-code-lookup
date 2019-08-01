@@ -22,6 +22,10 @@ module.exports.byInternet = function(code) {
   return search('internet', code.toUpperCase())
 }
 
+module.exports.byCountry = function(country) {
+  return search('country', country)
+}
+
 function search(field, code) {
   for (var i = 0; i < countries.length; i++) {
     if (countries[i][field] === code) {
