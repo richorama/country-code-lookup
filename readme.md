@@ -34,6 +34,9 @@ lookup.byIso(826);
 // search by internet code
 lookup.byInternet('UK');
 
+// search by country name
+lookup.byCountry('United Kingdom');
+
 // get an array of all countries
 lookup.countries
 ```
