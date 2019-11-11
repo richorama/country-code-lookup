@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/richorama/country-code-lookup.svg?branch=master)](https://travis-ci.org/richorama/country-code-lookup)
+![](https://github.com/richorama/country-code-lookup/workflows/Node%20CI/badge.svg?branch=master) 
 
 # Country Code Lookup
 
