@@ -23,3 +23,8 @@ jobs:
         npm test
       env:
         CI: true
+    - name: npm publish
+      run: |
+        echo "//<npm-registry>:8080/:_authToken=${{ secrets.API_KEY }}" > ~/.npmrc
+        npm publish
+      if: github.ref == 'refs/heads/master'
