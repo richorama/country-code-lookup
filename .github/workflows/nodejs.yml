@@ -9,7 +9,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [8.x, 10.x, 12.x]
+        node-version: [12.x]
 
     steps:
     - uses: actions/checkout@v1
@@ -26,5 +26,5 @@ jobs:
     - name: npm publish
       run: |
         echo "//registry.npmjs.org/:_authToken=${{ secrets.API_KEY }}" > ~/.npmrc
-        npm publish
+        ! npm publish
       if: github.ref == 'refs/heads/master'
