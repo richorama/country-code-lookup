@@ -24,18 +24,18 @@ $ npm install country-code-lookup
 var lookup = require('country-code-lookup');
 
 // search by FIPS
-lookup.byFips('UK');
+lookup.byFips('UK')
 
 // search by ISO
-lookup.byIso('GB');
-lookup.byIso('GBR');
-lookup.byIso(826);
+lookup.byIso('GB')
+lookup.byIso('GBR')
+lookup.byIso(826)
 
 // search by internet code
-lookup.byInternet('UK');
+lookup.byInternet('UK')
 
 // search by country name
-lookup.byCountry('United Kingdom');
+lookup.byCountry('United Kingdom')
 
 // get an array of all countries
 lookup.countries
