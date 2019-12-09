@@ -21,7 +21,7 @@ $ npm install country-code-lookup
 ## Usage
 
 ```js
-var lookup = require('country-code-lookup')
+const lookup = require('country-code-lookup')
 
 // search by FIPS
 lookup.byFips('UK')
