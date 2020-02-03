@@ -2540,7 +2540,7 @@ var countries = [
     capital: 'Lusaka',
     fips: 'ZA',
     iso2: 'ZM',
-    iso3: 'ZWB',
+    iso3: 'ZMB',
     isoNo: '894',
     internet: 'ZM'
   },

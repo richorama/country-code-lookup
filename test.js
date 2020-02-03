@@ -104,4 +104,11 @@ describe('country code', function() {
 
     done()
   })
+
+  it('Zambia is ZMB', function(done) {
+    var zambia = countries.byIso('ZMB')
+    if (null == zambia) return done('Zambia is ZMB')
+
+    done()
+  })
 })
