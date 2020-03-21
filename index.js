@@ -1337,7 +1337,7 @@ var countries = [
   {
     continent: 'Europe',
     region: 'South East Europe',
-    country: 'Macedonia',
+    country: 'North Macedonia',
     capital: 'Skopje',
     fips: 'MK',
     iso2: 'MK',
@@ -2162,8 +2162,8 @@ var countries = [
   {
     continent: 'Africa',
     region: 'Southern Africa',
-    country: 'Swaziland',
-    capital: 'Mbabane��',
+    country: 'Eswatini',
+    capital: 'Mbabane',
     fips: 'WZ',
     iso2: 'SZ',
     iso3: 'SWZ',
