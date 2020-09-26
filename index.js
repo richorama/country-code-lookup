@@ -2558,7 +2558,7 @@ var countries = [
   {
     continent: 'Asia',
     region: 'East Asia',
-    country: 'Hong Kong (China)',
+    country: 'Hong Kong',
     capital: 'Victoria',
     fips: 'HK',
     iso2: 'HK',
@@ -2569,7 +2569,7 @@ var countries = [
   {
     continent: 'Asia',
     region: 'East Asia',
-    country: 'Macau (China)',
+    country: 'Macau',
     capital: 'Macau',
     fips: 'MC',
     iso2: 'MO',
