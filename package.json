@@ -3,6 +3,7 @@
   "version": "0.0.18",
   "description": "Finds countries by various country codes",
   "main": "index.js",
+  "types": "./index.d.ts",
   "scripts": {
     "test": "mocha"
   },
