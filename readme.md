@@ -1,4 +1,6 @@
+[![NPM version](https://img.shields.io/npm/v/country-code-lookup.svg)](https://www.npmjs.com/package/country-code-lookup)
 ![](https://github.com/richorama/country-code-lookup/workflows/Node%20CI/badge.svg?branch=master) 
+[![Downloads](https://img.shields.io/npm/dm/country-code-lookup.svg)](https://npmcharts.com/compare/country-code-lookup?minimal=true)
 
 # Country Code Lookup
 
