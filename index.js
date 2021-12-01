@@ -2791,7 +2791,7 @@ var countries = [
     region: 'South East Europe',
     country: 'Republic of Kosovo',
     capital: 'Pristina',
-    fips: 'XK',
+    fips: 'KV',
     iso2: 'XK',
     iso3: 'UNK',
     isoNo: null,
