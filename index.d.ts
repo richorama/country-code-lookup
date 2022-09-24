@@ -10,16 +10,14 @@ export interface Country {
   internet: string;
 }
 
-export type SearchOutput = Country | null;
-
 export const countries: Country[];
 
-declare function search(field: string, code: string | number): SearchOutput;
+export type CountrySearchResult = Country | null;
 
-export function byFips(code: string): SearchOutput;
+export function byFips(code: string): CountrySearchResult;
 
-export function byIso(code: string | number): SearchOutput;
+export function byIso(code: string | number): CountrySearchResult;
 
-export function byInternet(code: string): SearchOutput;
+export function byInternet(code: string): CountrySearchResult;
 
-export function byCountry(country: string): SearchOutput;
+export function byCountry(country: string): CountrySearchResult;
