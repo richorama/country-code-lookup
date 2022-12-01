@@ -14,8 +14,6 @@ export type SearchOutput = Country | null;
 
 export const countries: Country[];
 
-declare function search(field: string, code: string | number): SearchOutput;
-
 export function byFips(code: string): SearchOutput;
 
 export function byIso(code: string | number): SearchOutput;
