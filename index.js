@@ -2361,7 +2361,7 @@ var countries = [
     continent: 'Europe',
     region: 'Eastern Europe',
     country: 'Ukraine',
-    capital: 'Kiev',
+    capital: 'Kyiv',
     fips: 'UP',
     iso2: 'UA',
     iso3: 'UKR',
