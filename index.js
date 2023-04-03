@@ -4,7 +4,7 @@ module.exports.byFips = function(code) {
 
 module.exports.byIso = function(code) {
   if (!isNaN(parseInt(code))) {
-    return search('isoNo', code.toString())
+    return search('isoNo', parseInt(code).toString())
   }
 
   if (code.length === 2) {
