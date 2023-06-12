@@ -2785,7 +2785,18 @@ var countries = [
     iso3: 'BES',
     isoNo: '535',
     internet: 'BQ'
-  }
+  },
+  {
+    continent: 'Europe',
+    region: 'South East Europe',
+    country: 'Republic of Kosovo',
+    capital: 'Pristina',
+    fips: 'KV',
+    iso2: 'XK',
+    iso3: 'XKS',
+    isoNo: null,
+    internet: 'XK'
+  },
 ]
 
 module.exports.countries = countries
