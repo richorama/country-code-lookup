@@ -114,9 +114,20 @@ describe("country code", function () {
 
   it("Finds countries with leading zeros", function (done) {
     var bangladesh = countries.byIso("050");
-    if (null == bangladesh || bangladesh.country !== "Bangladesh")
-      return done("Bangladesh not found");
+    if (null == bangladesh) return done("Bangladesh not found");
+    if (bangladesh.country !== "Bangladesh") return done(`${bangladesh.country} found`);
 
     done();
   });
+
+  it("All iso numbers are 3 digits", function (done) {
+    var iso2 = countries.countries
+      .filter(x=> x.country !== "Republic of Kosovo")
+      .filter(function (country) {
+        return (country.isoNo || "").length !== 3;
+      });
+    if (iso2.length > 0) return done(`iso numbers are not all 3 digits - check ${iso2[0].country}`);
+    done();
+  })
+
 });
