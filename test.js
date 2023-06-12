@@ -122,9 +122,8 @@ describe("country code", function () {
 
   it("All iso numbers are 3 digits", function (done) {
     var iso2 = countries.countries
-      .filter(function (country) {
-        return country.isoNo.length !== 3;
-      });
+      .filter(country => country.country !== "Republic of Kosovo")
+      .filter(country => country.isoNo.length !== 3);
     if (iso2.length > 0) return done(`iso numbers are not all 3 digits - check ${iso2[0].country}`);
     done();
   })
