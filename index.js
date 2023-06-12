@@ -4,7 +4,7 @@ module.exports.byFips = function(code) {
 
 module.exports.byIso = function(code) {
   if (!isNaN(parseInt(code))) {
-    return search('isoNo', parseInt(code).toString())
+    return search('isoNo',  ("00" + parseInt(code).toString()).slice(-3) )
   }
 
   if (code.length === 2) {
@@ -44,7 +44,7 @@ var countries = [
     fips: 'AF',
     iso2: 'AF',
     iso3: 'AFG',
-    isoNo: '4',
+    isoNo: '004',
     internet: 'AF'
   },
   {
@@ -55,7 +55,7 @@ var countries = [
     fips: 'AL',
     iso2: 'AL',
     iso3: 'ALB',
-    isoNo: '8',
+    isoNo: '008',
     internet: 'AL'
   },
   {
@@ -66,7 +66,7 @@ var countries = [
     fips: 'AG',
     iso2: 'DZ',
     iso3: 'DZA',
-    isoNo: '12',
+    isoNo: '012',
     internet: 'DZ'
   },
   {
@@ -77,7 +77,7 @@ var countries = [
     fips: 'AQ',
     iso2: 'AS',
     iso3: 'ASM',
-    isoNo: '16',
+    isoNo: '016',
     internet: 'AS'
   },
   {
@@ -88,7 +88,7 @@ var countries = [
     fips: 'AN',
     iso2: 'AD',
     iso3: 'AND',
-    isoNo: '20',
+    isoNo: '020',
     internet: 'AD'
   },
   {
@@ -99,7 +99,7 @@ var countries = [
     fips: 'AO',
     iso2: 'AO',
     iso3: 'AGO',
-    isoNo: '24',
+    isoNo: '024',
     internet: 'AO'
   },
   {
@@ -121,7 +121,7 @@ var countries = [
     fips: 'AC',
     iso2: 'AG',
     iso3: 'ATG',
-    isoNo: '28',
+    isoNo: '028',
     internet: 'AG'
   },
   {
@@ -132,7 +132,7 @@ var countries = [
     fips: 'AR',
     iso2: 'AR',
     iso3: 'ARG',
-    isoNo: '32',
+    isoNo: '032',
     internet: 'AR'
   },
   {
@@ -143,7 +143,7 @@ var countries = [
     fips: 'AM',
     iso2: 'AM',
     iso3: 'ARM',
-    isoNo: '51',
+    isoNo: '051',
     internet: 'AM'
   },
   {
@@ -165,7 +165,7 @@ var countries = [
     fips: 'AS',
     iso2: 'AU',
     iso3: 'AUS',
-    isoNo: '36',
+    isoNo: '036',
     internet: 'AU'
   },
   {
@@ -176,7 +176,7 @@ var countries = [
     fips: 'AU',
     iso2: 'AT',
     iso3: 'AUT',
-    isoNo: '40',
+    isoNo: '040',
     internet: 'AT'
   },
   {
@@ -187,7 +187,7 @@ var countries = [
     fips: 'AJ',
     iso2: 'AZ',
     iso3: 'AZE',
-    isoNo: '31',
+    isoNo: '031',
     internet: 'AZ'
   },
   {
@@ -198,7 +198,7 @@ var countries = [
     fips: 'BF',
     iso2: 'BS',
     iso3: 'BHS',
-    isoNo: '44',
+    isoNo: '044',
     internet: 'BS'
   },
   {
@@ -209,7 +209,7 @@ var countries = [
     fips: 'BA',
     iso2: 'BH',
     iso3: 'BHR',
-    isoNo: '48',
+    isoNo: '048',
     internet: 'BH'
   },
   {
@@ -220,7 +220,7 @@ var countries = [
     fips: 'BG',
     iso2: 'BD',
     iso3: 'BGD',
-    isoNo: '50',
+    isoNo: '050',
     internet: 'BD'
   },
   {
@@ -231,7 +231,7 @@ var countries = [
     fips: 'BB',
     iso2: 'BB',
     iso3: 'BRB',
-    isoNo: '52',
+    isoNo: '052',
     internet: 'BB'
   },
   {
@@ -253,7 +253,7 @@ var countries = [
     fips: 'BE',
     iso2: 'BE',
     iso3: 'BEL',
-    isoNo: '56',
+    isoNo: '056',
     internet: 'BE'
   },
   {
@@ -264,7 +264,7 @@ var countries = [
     fips: 'BH',
     iso2: 'BZ',
     iso3: 'BLZ',
-    isoNo: '84',
+    isoNo: '084',
     internet: 'BZ'
   },
   {
@@ -286,7 +286,7 @@ var countries = [
     fips: 'BD',
     iso2: 'BM',
     iso3: 'BMU',
-    isoNo: '60',
+    isoNo: '060',
     internet: 'BM'
   },
   {
@@ -297,7 +297,7 @@ var countries = [
     fips: 'BT',
     iso2: 'BT',
     iso3: 'BTN',
-    isoNo: '64',
+    isoNo: '064',
     internet: 'BT'
   },
   {
@@ -308,7 +308,7 @@ var countries = [
     fips: 'BL',
     iso2: 'BO',
     iso3: 'BOL',
-    isoNo: '68',
+    isoNo: '068',
     internet: 'BO'
   },
   {
@@ -319,7 +319,7 @@ var countries = [
     fips: 'BK',
     iso2: 'BA',
     iso3: 'BIH',
-    isoNo: '70',
+    isoNo: '070',
     internet: 'BA'
   },
   {
@@ -330,7 +330,7 @@ var countries = [
     fips: 'BC',
     iso2: 'BW',
     iso3: 'BWA',
-    isoNo: '72',
+    isoNo: '072',
     internet: 'BW'
   },
   {
@@ -341,7 +341,7 @@ var countries = [
     fips: 'BR',
     iso2: 'BR',
     iso3: 'BRA',
-    isoNo: '76',
+    isoNo: '076',
     internet: 'BR'
   },
   {
@@ -352,7 +352,7 @@ var countries = [
     fips: 'VI',
     iso2: 'VG',
     iso3: 'VGB',
-    isoNo: '92',
+    isoNo: '092',
     internet: 'VG'
   },
   {
@@ -363,7 +363,7 @@ var countries = [
     fips: 'BX',
     iso2: 'BN',
     iso3: 'BRN',
-    isoNo: '96',
+    isoNo: '096',
     internet: 'BN'
   },
   {
@@ -2079,7 +2079,7 @@ var countries = [
     fips: 'BP',
     iso2: 'SB',
     iso3: 'SLB',
-    isoNo: '90',
+    isoNo: '090',
     internet: 'SB'
   },
   {
@@ -2585,7 +2585,7 @@ var countries = [
     fips: 'AY',
     iso2: 'AQ',
     iso3: 'ATA',
-    isoNo: '10',
+    isoNo: '010',
     internet: 'AQ'
   },
   {
@@ -2596,7 +2596,7 @@ var countries = [
     fips: 'BV',
     iso2: 'BV',
     iso3: 'BVT',
-    isoNo: '74',
+    isoNo: '074',
     internet: 'BV'
   },
   {
@@ -2607,7 +2607,7 @@ var countries = [
     fips: 'IO',
     iso2: 'IO',
     iso3: 'IOT',
-    isoNo: '86',
+    isoNo: '086',
     internet: 'IO'
   },
   {
