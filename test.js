@@ -73,7 +73,7 @@ describe("country code", function () {
 
   it("throws an error if the iso code is invalid", function (done) {
     try {
-      var uk = countries.byIso("foo bar baz");
+      countries.byIso("foo bar baz");
       return done("exception should be thrown");
     } catch (e) {
       return done();
