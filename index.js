@@ -103,7 +103,7 @@ var countries = [
     internet: 'AO'
   },
   {
-    continent: 'Americas',
+    continent: 'North America',
     region: 'West Indies',
     country: 'Anguilla',
     capital: 'The Valley',
@@ -114,7 +114,7 @@ var countries = [
     internet: 'AI'
   },
   {
-    continent: 'Americas',
+    continent: 'North America',
     region: 'West Indies',
     country: 'Antigua and Barbuda',
     capital: "Saint John's",
@@ -125,7 +125,7 @@ var countries = [
     internet: 'AG'
   },
   {
-    continent: 'Americas',
+    continent: 'South America',
     region: 'South America',
     country: 'Argentina',
     capital: 'Buenos Aires',
@@ -147,7 +147,7 @@ var countries = [
     internet: 'AM'
   },
   {
-    continent: 'Americas',
+    continent: 'South America',
     region: 'West Indies',
     country: 'Aruba',
     capital: 'Oranjestad',
@@ -191,7 +191,7 @@ var countries = [
     internet: 'AZ'
   },
   {
-    continent: 'Americas',
+    continent: 'North America',
     region: 'West Indies',
     country: 'The Bahamas',
     capital: 'Nassau',
@@ -224,7 +224,7 @@ var countries = [
     internet: 'BD'
   },
   {
-    continent: 'Americas',
+    continent: 'North America',
     region: 'West Indies',
     country: 'Barbados',
     capital: 'Bridgetown',
@@ -257,7 +257,7 @@ var countries = [
     internet: 'BE'
   },
   {
-    continent: 'Americas',
+    continent: 'North America',
     region: 'Central America',
     country: 'Belize',
     capital: 'Belmopan',
@@ -279,7 +279,7 @@ var countries = [
     internet: 'BJ'
   },
   {
-    continent: 'Americas',
+    continent: 'North America',
     region: 'West Indies',
     country: 'Bermuda',
     capital: 'Hamilton',
@@ -301,7 +301,7 @@ var countries = [
     internet: 'BT'
   },
   {
-    continent: 'Americas',
+    continent: 'South America',
     region: 'South America',
     country: 'Bolivia',
     capital: 'La Paz / Sucre',
@@ -334,7 +334,7 @@ var countries = [
     internet: 'BW'
   },
   {
-    continent: 'Americas',
+    continent: 'South America',
     region: 'South America',
     country: 'Brazil',
     capital: 'Brasilia',
@@ -345,7 +345,7 @@ var countries = [
     internet: 'BR'
   },
   {
-    continent: 'Americas',
+    continent: 'North America',
     region: 'West Indies',
     country: 'British Virgin Islands',
     capital: 'Road Town',
@@ -422,7 +422,7 @@ var countries = [
     internet: 'CM'
   },
   {
-    continent: 'Americas',
+    continent: 'North America',
     region: 'North America',
     country: 'Canada',
     capital: 'Ottawa',
@@ -444,7 +444,7 @@ var countries = [
     internet: 'CV'
   },
   {
-    continent: 'Americas',
+    continent: 'North America',
     region: 'West Indies',
     country: 'Cayman Islands',
     capital: 'George Town',
@@ -477,7 +477,7 @@ var countries = [
     internet: 'TD'
   },
   {
-    continent: 'Americas',
+    continent: 'South America',
     region: 'South America',
     country: 'Chile',
     capital: 'Santiago',
@@ -521,7 +521,7 @@ var countries = [
     internet: 'CC'
   },
   {
-    continent: 'Americas',
+    continent: 'South America',
     region: 'South America',
     country: 'Colombia',
     capital: 'Bogota',
@@ -565,7 +565,7 @@ var countries = [
     internet: 'CK'
   },
   {
-    continent: 'Americas',
+    continent: 'North America',
     region: 'Central America',
     country: 'Costa Rica',
     capital: 'San Jose',
@@ -598,7 +598,7 @@ var countries = [
     internet: 'HR'
   },
   {
-    continent: 'Americas',
+    continent: 'North America',
     region: 'West Indies',
     country: 'Cuba',
     capital: 'Havana',
@@ -653,7 +653,7 @@ var countries = [
     internet: 'DJ'
   },
   {
-    continent: 'Americas',
+    continent: 'North America',
     region: 'West Indies',
     country: 'Dominica',
     capital: 'Roseau',
@@ -664,7 +664,7 @@ var countries = [
     internet: 'DM'
   },
   {
-    continent: 'Americas',
+    continent: 'North America',
     region: 'West Indies',
     country: 'Dominican Republic',
     capital: 'Santo Domingo',
@@ -675,7 +675,7 @@ var countries = [
     internet: 'DO'
   },
   {
-    continent: 'Americas',
+    continent: 'South America',
     region: 'South America',
     country: 'Ecuador',
     capital: 'Quito',
@@ -697,7 +697,7 @@ var countries = [
     internet: 'EG'
   },
   {
-    continent: 'Americas',
+    continent: 'North America',
     region: 'Central America',
     country: 'El Salvador',
     capital: 'San Salvador',
@@ -752,7 +752,7 @@ var countries = [
     internet: 'ET'
   },
   {
-    continent: 'Americas',
+    continent: 'South America',
     region: 'South America',
     country: 'Falkland Islands (Islas Malvinas)',
     capital: 'Stanley',
@@ -807,7 +807,7 @@ var countries = [
     internet: 'FR'
   },
   {
-    continent: 'Americas',
+    continent: 'South America',
     region: 'South America',
     country: 'French Guiana',
     capital: 'Cayenne',
@@ -906,7 +906,7 @@ var countries = [
     internet: 'GR'
   },
   {
-    continent: 'Americas',
+    continent: 'North America',
     region: 'North America',
     country: 'Greenland',
     capital: 'Nuuk (Godthab)',
@@ -917,8 +917,8 @@ var countries = [
     internet: 'GL'
   },
   {
-    continent: 'Americas',
-    region: 'West Indies',
+    continent: 'North America',
+    region: 'North America',
     country: 'Grenada',
     capital: "Saint George's",
     fips: 'GJ',
@@ -928,8 +928,8 @@ var countries = [
     internet: 'GD'
   },
   {
-    continent: 'Americas',
-    region: 'West Indies',
+    continent: 'North America',
+    region: 'North America',
     country: 'Guadeloupe',
     capital: 'Basse-Terre',
     fips: 'GP',
@@ -950,7 +950,7 @@ var countries = [
     internet: 'GU'
   },
   {
-    continent: 'Americas',
+    continent: 'North America',
     region: 'Central America',
     country: 'Guatemala',
     capital: 'Guatemala',
@@ -983,7 +983,7 @@ var countries = [
     internet: 'GW'
   },
   {
-    continent: 'Americas',
+    continent: 'South America',
     region: 'South America',
     country: 'Guyana',
     capital: 'Georgetown',
@@ -994,8 +994,8 @@ var countries = [
     internet: 'GY'
   },
   {
-    continent: 'Americas',
-    region: 'West Indies',
+    continent: 'North America',
+    region: 'North America',
     country: 'Haiti',
     capital: 'Port-au-Prince',
     fips: 'HA',
@@ -1016,7 +1016,7 @@ var countries = [
     internet: 'VA'
   },
   {
-    continent: 'Americas',
+    continent: 'North America',
     region: 'Central America',
     country: 'Honduras',
     capital: 'Tegucigalpa',
@@ -1126,8 +1126,8 @@ var countries = [
     internet: 'IT'
   },
   {
-    continent: 'Americas',
-    region: 'West Indies',
+    continent: 'North America',
+    region: 'North America',
     country: 'Jamaica',
     capital: 'Kingston',
     fips: 'JM',
@@ -1434,8 +1434,8 @@ var countries = [
     internet: 'MH'
   },
   {
-    continent: 'Americas',
-    region: 'West Indies',
+    continent: 'North America',
+    region: 'North America',
     country: 'Martinique',
     capital: 'Fort-de-France',
     fips: 'MB',
@@ -1478,7 +1478,7 @@ var countries = [
     internet: 'YT'
   },
   {
-    continent: 'Americas',
+    continent: 'North America',
     region: 'Central America',
     country: 'Mexico',
     capital: 'Mexico',
@@ -1533,8 +1533,8 @@ var countries = [
     internet: 'MN'
   },
   {
-    continent: 'Americas',
-    region: 'West Indies',
+    continent: 'North America',
+    region: 'North America',
     country: 'Montserrat',
     capital: 'Plymouth',
     fips: 'MH',
@@ -1621,8 +1621,8 @@ var countries = [
     internet: 'NL'
   },
   {
-    continent: 'Americas',
-    region: 'West Indies',
+    continent: 'North America',
+    region: 'North America',
     country: 'Netherlands Antilles',
     capital: 'Willemstad',
     fips: 'NT',
@@ -1654,7 +1654,7 @@ var countries = [
     internet: 'NZ'
   },
   {
-    continent: 'Americas',
+    continent: 'North America',
     region: 'Central America',
     country: 'Nicaragua',
     capital: 'Managua',
@@ -1775,7 +1775,7 @@ var countries = [
     internet: 'PS'
   },
   {
-    continent: 'Americas',
+    continent: 'North America',
     region: 'Central America',
     country: 'Panama',
     capital: 'Panama',
@@ -1797,7 +1797,7 @@ var countries = [
     internet: 'PG'
   },
   {
-    continent: 'Americas',
+    continent: 'South America',
     region: 'South America',
     country: 'Paraguay',
     capital: 'Asuncion',
@@ -1808,7 +1808,7 @@ var countries = [
     internet: 'PY'
   },
   {
-    continent: 'Americas',
+    continent: 'South America',
     region: 'South America',
     country: 'Peru',
     capital: 'Lima',
@@ -1863,8 +1863,8 @@ var countries = [
     internet: 'PT'
   },
   {
-    continent: 'Americas',
-    region: 'West Indies',
+    continent: 'North America',
+    region: 'North America',
     country: 'Puerto Rico',
     capital: 'San Juan',
     fips: 'RQ',
@@ -1929,8 +1929,8 @@ var countries = [
     internet: 'RW'
   },
   {
-    continent: 'Americas',
-    region: 'West Indies',
+    continent: 'North America',
+    region: 'North America',
     country: 'Saint Kitts and Nevis',
     capital: 'Basseterre',
     fips: 'SC',
@@ -1940,8 +1940,8 @@ var countries = [
     internet: 'KN'
   },
   {
-    continent: 'Americas',
-    region: 'West Indies',
+    continent: 'North America',
+    region: 'North America',
     country: 'Saint Lucia',
     capital: 'Castries',
     fips: 'ST',
@@ -1951,7 +1951,7 @@ var countries = [
     internet: 'LC'
   },
   {
-    continent: 'Americas',
+    continent: 'North America',
     region: 'North America',
     country: 'Saint Pierre and Miquelon',
     capital: 'Saint-Pierre',
@@ -1962,8 +1962,8 @@ var countries = [
     internet: 'PM'
   },
   {
-    continent: 'Americas',
-    region: 'West Indies',
+    continent: 'North America',
+    region: 'North America',
     country: 'Saint Vincent and the Grenadines',
     capital: 'Kingstown',
     fips: 'VC',
@@ -2138,7 +2138,7 @@ var countries = [
     internet: 'SD'
   },
   {
-    continent: 'Americas',
+    continent: 'South America',
     region: 'South America',
     country: 'Suriname',
     capital: 'Paramaribo',
@@ -2281,8 +2281,8 @@ var countries = [
     internet: 'TO'
   },
   {
-    continent: 'Americas',
-    region: 'West Indies',
+    continent: 'North America',
+    region: 'North America',
     country: 'Trinidad and Tobago',
     capital: 'Port-of-Spain',
     fips: 'TD',
@@ -2325,8 +2325,8 @@ var countries = [
     internet: 'TM'
   },
   {
-    continent: 'Americas',
-    region: 'West Indies',
+    continent: 'North America',
+    region: 'North America',
     country: 'Turks and Caicos Islands',
     capital: 'Grand Turk',
     fips: 'TK',
@@ -2391,7 +2391,7 @@ var countries = [
     internet: 'UK'
   },
   {
-    continent: 'Americas',
+    continent: 'North America',
     region: 'North America',
     country: 'United States',
     capital: 'Washington DC',
@@ -2402,7 +2402,7 @@ var countries = [
     internet: 'US'
   },
   {
-    continent: 'Americas',
+    continent: 'North America',
     region: 'North America',
     country: 'United States Minor Outlying Islands',
     capital: 'Washington DC',
@@ -2413,7 +2413,7 @@ var countries = [
     internet: 'US'
   },
   {
-    continent: 'Americas',
+    continent: 'South America',
     region: 'South America',
     country: 'Uruguay',
     capital: 'Montevideo',
@@ -2446,7 +2446,7 @@ var countries = [
     internet: 'VU'
   },
   {
-    continent: 'Americas',
+    continent: 'South America',
     region: 'South America',
     country: 'Venezuela',
     capital: 'Caracas',
@@ -2468,8 +2468,8 @@ var countries = [
     internet: 'VN'
   },
   {
-    continent: 'Americas',
-    region: 'West Indies',
+    continent: 'North America',
+    region: 'North America',
     country: 'Virgin Islands',
     capital: 'Charlotte Amalie',
     fips: 'VQ',
@@ -2589,7 +2589,7 @@ var countries = [
     internet: 'AQ'
   },
   {
-    continent: 'Atlantic Ocean',
+    continent: 'Antarctica',
     region: 'South Atlantic Ocean',
     country: 'Bouvet Island',
     capital: '',
@@ -2611,7 +2611,7 @@ var countries = [
     internet: 'IO'
   },
   {
-    continent: 'Indian Ocean',
+    continent: 'Antarctica',
     region: 'Southern Indian Ocean',
     country: 'French Southern and Antarctic Lands',
     capital: '',
@@ -2622,7 +2622,7 @@ var countries = [
     internet: '--'
   },
   {
-    continent: 'Indian Ocean',
+    continent: 'Antarctica',
     region: 'Southern Indian Ocean',
     country: 'Heard Island and McDonald Islands',
     capital: '',
@@ -2633,7 +2633,7 @@ var countries = [
     internet: 'HM'
   },
   {
-    continent: 'Atlantic Ocean',
+    continent: 'Africa',
     region: 'South Atlantic Ocean',
     country: 'Saint Helena',
     capital: '',
@@ -2644,7 +2644,7 @@ var countries = [
     internet: 'SH'
   },
   {
-    continent: 'Atlantic Ocean',
+    continent: 'Antarctica',
     region: 'South Atlantic Ocean',
     country: 'South Georgia and the South Sandwich Islands',
     capital: '',
@@ -2677,8 +2677,8 @@ var countries = [
     internet: 'RS'
   },
   {
-    continent: 'Americas',
-    region: 'West Indies',
+    continent: 'North America',
+    region: 'North America',
     country: 'Saint Barthélemy',
     capital: 'Gustavia',
     fips: 'TB',
@@ -2710,8 +2710,8 @@ var countries = [
     internet: 'JE'
   },
   {
-    continent: 'Americas',
-    region: 'West Indies',
+    continent: 'North America',
+    region: 'North America',
     country: 'Curaçao',
     capital: 'Willemstad',
     fips: 'UC',
@@ -2721,8 +2721,8 @@ var countries = [
     internet: 'CW'
   },
   {
-    continent: 'Americas',
-    region: 'West Indies',
+    continent: 'North America',
+    region: 'North America',
     country: 'Saint Martin',
     capital: 'Marigot',
     fips: 'RN',
@@ -2732,8 +2732,8 @@ var countries = [
     internet: 'MF'
   },
   {
-    continent: 'Americas',
-    region: 'West Indies',
+    continent: 'North America',
+    region: 'North America',
     country: 'Sint Maarten',
     capital: 'Philipsburg',
     fips: 'NN',
@@ -2776,8 +2776,8 @@ var countries = [
     internet: 'AX'
   },
   {
-    continent: 'Americas',
-    region: 'West Indies',
+    continent: 'North America',
+    region: 'North America',
     country: 'Bonaire',
     capital: 'Kralendijk',
     fips: 'BQ',
