@@ -128,4 +128,10 @@ describe("country code", function () {
     done();
   })
 
+  it ("We now call the Czech Repulic 'Czechia'", function(done){
+    var czechia = countries.byFips("EZ")
+    if (czechia.country !== "Czechia") return done(`This should be Czechia: ${czechia}`)
+    done();
+  })
+
 });

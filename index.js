@@ -622,7 +622,7 @@ var countries = [
   {
     continent: 'Europe',
     region: 'Central Europe',
-    country: 'Czech Republic',
+    country: 'Czechia',
     capital: 'Prague',
     fips: 'EZ',
     iso2: 'CZ',
