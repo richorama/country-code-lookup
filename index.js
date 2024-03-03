@@ -2134,7 +2134,7 @@ var countries = [
     fips: 'SU',
     iso2: 'SD',
     iso3: 'SDN',
-    isoNo: '736',
+    isoNo: '729',
     internet: 'SD'
   },
   {

@@ -134,4 +134,11 @@ describe("country code", function () {
     done();
   })
 
+  it("Sudan is 729", function (done) {
+    var sudan = countries.byIso("SDN");
+    if (sudan.isoNo != '729') return done("Sudan should have iso number 729");
+
+    done();
+  });
+
 });
