@@ -23,12 +23,12 @@ module.exports.byInternet = function(code) {
 }
 
 module.exports.byCountry = function(country) {
-  return search('country', country)
+  return search('country', country.toUpperCase())
 }
 
 function search(field, code) {
   for (var i = 0; i < countries.length; i++) {
-    if (countries[i][field] === code) {
+    if (countries[i][field]?.toUpperCase() === code) {
       return countries[i]
     }
   }
