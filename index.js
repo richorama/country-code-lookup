@@ -2793,7 +2793,7 @@ var countries = [
     capital: 'Pristina',
     fips: 'KV',
     iso2: 'XK',
-    iso3: 'XKS',
+    iso3: 'XKX',
     isoNo: null,
     internet: 'XK'
   },
