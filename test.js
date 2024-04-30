@@ -141,4 +141,11 @@ describe("country code", function () {
     done();
   });
 
+  it("Kosovo is XKX", function (done) {
+    var sudan = countries.byIso("XKX");
+    if (sudan.iso3 != 'XKX') return done("Kosovo should have iso  XKX");
+
+    done();
+  });
+
 });
