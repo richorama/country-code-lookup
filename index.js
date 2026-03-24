@@ -2305,7 +2305,7 @@ var countries = [
   {
     continent: 'Asia',
     region: 'South West Asia',
-    country: 'Turkey',
+    country: 'Turkiye',
     capital: 'Ankara',
     fips: 'TU',
     iso2: 'TR',
