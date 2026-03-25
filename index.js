@@ -1,11 +1,15 @@
 module.exports.byFips = function(code) {
+  if (typeof code !== 'string') return null
   return search('fips', code.toUpperCase())
 }
 
 module.exports.byIso = function(code) {
-  if (!isNaN(parseInt(code))) {
+  if (code === null || code === undefined) return null
+  if (typeof code === 'number' || /^\d+$/.test(code)) {
     return search('isoNo',  ("00" + parseInt(code).toString()).slice(-3) )
   }
+
+  if (typeof code !== 'string') return null
 
   if (code.length === 2) {
     return search('iso2', code.toUpperCase())
@@ -19,10 +23,12 @@ module.exports.byIso = function(code) {
 }
 
 module.exports.byInternet = function(code) {
+  if (typeof code !== 'string') return null
   return search('internet', code.toUpperCase())
 }
 
 module.exports.byCountry = function(country) {
+  if (typeof country !== 'string') return null
   return search('country', country)
 }
 
@@ -2798,5 +2804,8 @@ var countries = [
     internet: 'XK'
   },
 ]
+
+countries.forEach(Object.freeze)
+Object.freeze(countries)
 
 module.exports.countries = countries

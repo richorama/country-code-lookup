@@ -1,151 +1,151 @@
+var assert = require("assert");
 var countries = require("./index.js");
 
 describe("country code", function () {
-  it("loads the countries into an array", function (done) {
-    if (countries.countries.length < 239)
-      return done(
-        "not all countries loaded, found " + countries.countries.length
-      );
-    return done();
+  it("loads the countries into an array", function () {
+    assert(countries.countries.length >= 239, "not all countries loaded, found " + countries.countries.length);
   });
 
-  it("finds countries by fips", function (done) {
+  it("finds countries by fips", function () {
     var uk = countries.byFips("UK");
-    if (!uk) return done("no country");
-    if (uk.country !== "United Kingdom") return done("wrong country");
-    if (uk.continent !== "Europe") return done("wrong continent");
-    if (uk.region !== "Western Europe") return done("wrong region");
-    if (uk.capital !== "London") return done("wrong capital");
-    return done();
+    assert(uk, "no country");
+    assert.strictEqual(uk.country, "United Kingdom");
+    assert.strictEqual(uk.continent, "Europe");
+    assert.strictEqual(uk.region, "Western Europe");
+    assert.strictEqual(uk.capital, "London");
   });
 
-  it("finds countries by iso 2", function (done) {
+  it("finds countries by iso 2", function () {
     var uk = countries.byIso("GB");
-    if (!uk) return done("no country");
-    if (uk.country !== "United Kingdom") return done("wrong country");
-    return done();
+    assert(uk, "no country");
+    assert.strictEqual(uk.country, "United Kingdom");
   });
 
-  it("finds countries by iso 3", function (done) {
+  it("finds countries by iso 3", function () {
     var uk = countries.byIso("GBR");
-    if (!uk) return done("no country");
-    if (uk.country !== "United Kingdom") return done("wrong country");
-    return done();
+    assert(uk, "no country");
+    assert.strictEqual(uk.country, "United Kingdom");
   });
 
-  it("finds countries by iso number", function (done) {
+  it("finds countries by iso number", function () {
     var uk = countries.byIso(826);
-    if (!uk) return done("no country");
-    if (uk.country !== "United Kingdom") return done("wrong country");
-    return done();
+    assert(uk, "no country");
+    assert.strictEqual(uk.country, "United Kingdom");
   });
 
-  it("finds countries by country name", function (done) {
+  it("finds countries by country name", function () {
     var uk = countries.byCountry("United Kingdom");
-    if (!uk) return done("no country");
-    if (uk.country !== "United Kingdom") return done("wrong country");
-    if (uk.continent !== "Europe") return done("wrong continent");
-    if (uk.region !== "Western Europe") return done("wrong region");
-    if (uk.capital !== "London") return done("wrong capital");
-    return done();
+    assert(uk, "no country");
+    assert.strictEqual(uk.country, "United Kingdom");
+    assert.strictEqual(uk.continent, "Europe");
+    assert.strictEqual(uk.region, "Western Europe");
+    assert.strictEqual(uk.capital, "London");
   });
 
-  it("finds countries by iso number as a string", function (done) {
+  it("finds countries by iso number as a string", function () {
     var uk = countries.byIso("826");
-    if (!uk) return done("no country");
-    if (uk.country !== "United Kingdom") return done("wrong country");
-    return done();
+    assert(uk, "no country");
+    assert.strictEqual(uk.country, "United Kingdom");
   });
 
-  it("finds countries by internet code", function (done) {
+  it("finds countries by internet code", function () {
     var uk = countries.byInternet("UK");
-    if (!uk) return done("no country");
-    if (uk.country !== "United Kingdom") return done("wrong country");
-    return done();
+    assert(uk, "no country");
+    assert.strictEqual(uk.country, "United Kingdom");
   });
 
-  it("finds countries by lower case fips", function (done) {
+  it("finds countries by lower case fips", function () {
     var uk = countries.byFips("uk");
-    if (!uk) return done("no country");
-    if (uk.country !== "United Kingdom") return done("wrong country");
-    return done();
+    assert(uk, "no country");
+    assert.strictEqual(uk.country, "United Kingdom");
   });
 
-  it("throws an error if the iso code is invalid", function (done) {
-    try {
+  it("throws an error if the iso code is invalid", function () {
+    assert.throws(function () {
       countries.byIso("foo bar baz");
-      return done("exception should be thrown");
-    } catch (e) {
-      return done();
-    }
+    });
   });
 
-  it("returns null if no country is found", function (done) {
+  it("returns null if no country is found", function () {
     var uk = countries.byIso(23452);
-    if (uk === null) return done();
-    return done("country should be null");
+    assert.strictEqual(uk, null);
   });
 
-  it("Romania is now ROU", function (done) {
-    var romania = countries.byIso("ROM");
-    if (null !== romania) return done("Romania is no longer ROM");
-
-    var romania = countries.byIso("ROU");
-    if (null === romania) return done("Romania is now ROU");
-    done();
+  it("Romania is now ROU", function () {
+    assert.strictEqual(countries.byIso("ROM"), null);
+    assert(countries.byIso("ROU"), "Romania is now ROU");
   });
 
-  it("Democratic Republic of Congo", function (done) {
-    var drcongo = countries.byIso("COD");
-    if (null == drcongo) return done("Democratic Republic of Congo is COD");
-
-    var drcongo = countries.byIso("CD");
-    if (null == drcongo) return done("Democratic Republic of Congo is CD");
-
-    done();
+  it("Democratic Republic of Congo", function () {
+    assert(countries.byIso("COD"), "Democratic Republic of Congo is COD");
+    assert(countries.byIso("CD"), "Democratic Republic of Congo is CD");
   });
 
-  it("Zambia is ZMB", function (done) {
-    var zambia = countries.byIso("ZMB");
-    if (null == zambia) return done("Zambia is ZMB");
-
-    done();
+  it("Zambia is ZMB", function () {
+    assert(countries.byIso("ZMB"), "Zambia is ZMB");
   });
 
-  it("Finds countries with leading zeros", function (done) {
+  it("Finds countries with leading zeros", function () {
     var bangladesh = countries.byIso("050");
-    if (null == bangladesh) return done("Bangladesh not found");
-    if (bangladesh.country !== "Bangladesh") return done(`${bangladesh.country} found`);
-
-    done();
+    assert(bangladesh, "Bangladesh not found");
+    assert.strictEqual(bangladesh.country, "Bangladesh");
   });
 
-  it("All iso numbers are 3 digits", function (done) {
-    var iso2 = countries.countries
+  it("All iso numbers are 3 digits", function () {
+    var bad = countries.countries
       .filter(country => country.country !== "Republic of Kosovo")
       .filter(country => country.isoNo.length !== 3);
-    if (iso2.length > 0) return done(`iso numbers are not all 3 digits - check ${iso2[0].country}`);
-    done();
-  })
+    assert.strictEqual(bad.length, 0, "iso numbers are not all 3 digits - check " + (bad[0] || {}).country);
+  });
 
-  it ("We now call the Czech Repulic 'Czechia'", function(done){
-    var czechia = countries.byFips("EZ")
-    if (czechia.country !== "Czechia") return done(`This should be Czechia: ${czechia}`)
-    done();
-  })
+  it("We now call the Czech Republic 'Czechia'", function () {
+    var czechia = countries.byFips("EZ");
+    assert.strictEqual(czechia.country, "Czechia");
+  });
 
-  it("Sudan is 729", function (done) {
+  it("Sudan is 729", function () {
     var sudan = countries.byIso("SDN");
-    if (sudan.isoNo != '729') return done("Sudan should have iso number 729");
-
-    done();
+    assert.strictEqual(sudan.isoNo, "729");
   });
 
-  it("Kosovo is XKX", function (done) {
-    var sudan = countries.byIso("XKX");
-    if (sudan.iso3 != 'XKX') return done("Kosovo should have iso  XKX");
-
-    done();
+  it("Kosovo is XKX", function () {
+    var kosovo = countries.byIso("XKX");
+    assert.strictEqual(kosovo.iso3, "XKX");
   });
 
+  // null/undefined input guards
+  it("byFips returns null for null/undefined/non-string input", function () {
+    assert.strictEqual(countries.byFips(null), null);
+    assert.strictEqual(countries.byFips(undefined), null);
+    assert.strictEqual(countries.byFips(123), null);
+  });
+
+  it("byIso returns null for null/undefined", function () {
+    assert.strictEqual(countries.byIso(null), null);
+    assert.strictEqual(countries.byIso(undefined), null);
+  });
+
+  it("byInternet returns null for null/undefined/non-string input", function () {
+    assert.strictEqual(countries.byInternet(null), null);
+    assert.strictEqual(countries.byInternet(undefined), null);
+    assert.strictEqual(countries.byInternet(42), null);
+  });
+
+  it("byCountry returns null for null/undefined/non-string input", function () {
+    assert.strictEqual(countries.byCountry(null), null);
+    assert.strictEqual(countries.byCountry(undefined), null);
+    assert.strictEqual(countries.byCountry(99), null);
+  });
+
+  // byIso does not treat mixed alpha-numeric strings as numbers
+  it("byIso does not misparse mixed alpha-numeric strings as numbers", function () {
+    // "1A" has length 2, so it's treated as an iso2 lookup (not a number), returning null
+    assert.strictEqual(countries.byIso("1A"), null);
+  });
+
+  // countries array is frozen
+  it("countries array is frozen and immutable", function () {
+    assert(Object.isFrozen(countries.countries), "countries array should be frozen");
+    assert(Object.isFrozen(countries.countries[0]), "country objects should be frozen");
+  });
 });
