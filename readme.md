@@ -57,6 +57,37 @@ Searching for a country will return either null, or a country object:
   internet: 'UK' }
 ````
 
+### Invalid inputs and lookup failures
+
+All lookup methods return `null` when a supported code or exact country name
+has no matching entry. Country-name matching is case-sensitive and does not
+trim whitespace.
+
+`byFips`, `byInternet`, and `byCountry` also return `null` for non-string inputs.
+`byIso` returns `null` for inputs that are neither strings nor numbers.
+
+Numeric ISO inputs must be integers between `0` and `999`. Invalid numbers
+(including negative, fractional, non-finite, and out-of-range values) return
+`null`. Digit-only strings are treated as numeric ISO codes, and leading zeros
+are supported.
+
+Unlike the other lookup methods, `byIso` throws
+`Error('cannot determine ISO code type')` for non-numeric strings whose length
+is neither two nor three characters. This existing behavior is retained for
+compatibility.
+
+```js
+lookup.byIso('ZZ')       // null: no matching ISO alpha-2 code
+lookup.byIso(1826)       // null: numeric code is out of range
+lookup.byIso('050')      // Bangladesh
+lookup.byCountry(' united kingdom ') // null: not an exact country name
+lookup.byIso('invalid')  // throws Error('cannot determine ISO code type')
+```
+
+Country objects expose numeric ISO codes as three-digit strings, such as
+`'004'` for Afghanistan. Kosovo has no assigned ISO numeric code, so its
+`isoNo` is `null`.
+
 ## Useful Links
 
 ISO 2 and 3 digit country codes: https://www.iban.com/country-codes
