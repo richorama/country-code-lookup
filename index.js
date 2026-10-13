@@ -4,12 +4,12 @@ module.exports.byFips = function(code) {
 }
 
 module.exports.byIso = function(code) {
-  if (code === null || code === undefined) return null
+  if (typeof code !== 'string' && typeof code !== 'number') return null
   if (typeof code === 'number' || /^\d+$/.test(code)) {
-    return search('isoNo',  ("00" + parseInt(code).toString()).slice(-3) )
+    var numericCode = Number(code)
+    if (!Number.isInteger(numericCode) || numericCode < 0 || numericCode > 999) return null
+    return search('isoNo', ("00" + numericCode.toString()).slice(-3))
   }
-
-  if (typeof code !== 'string') return null
 
   if (code.length === 2) {
     return search('iso2', code.toUpperCase())

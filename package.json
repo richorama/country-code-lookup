@@ -5,7 +5,8 @@
   "main": "index.js",
   "types": "./index.d.ts",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha && npm run test:types",
+    "test:types": "tsc --noEmit --strict test-types.ts"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
   },
   "homepage": "https://github.com/richorama/country-code-lookup",
   "devDependencies": {
-    "mocha": "^11.7.5"
+    "mocha": "^11.7.5",
+    "typescript": "^7.0.2"
   }
 }

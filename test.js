@@ -48,6 +48,30 @@ describe("country code", function () {
     assert.strictEqual(uk.country, "United Kingdom");
   });
 
+  [1826, -826, 826.9, 1000, 1e21, NaN, Infinity, -Infinity].forEach(function (code) {
+    it("returns null for invalid numeric ISO code " + code, function () {
+      assert.strictEqual(countries.byIso(code), null);
+    });
+  });
+
+  ["1826", "1000", "999999999999999999999826"].forEach(function (code) {
+    it("returns null for out-of-range numeric ISO string " + code, function () {
+      assert.strictEqual(countries.byIso(code), null);
+    });
+  });
+
+  it("preserves numeric ISO padding and leading-zero lookups", function () {
+    [4, "4", "04", "004"].forEach(function (code) {
+      assert.strictEqual(countries.byIso(code).iso2, "AF");
+    });
+    [50, "50", "050", "00050"].forEach(function (code) {
+      assert.strictEqual(countries.byIso(code).iso2, "BD");
+    });
+    [0, "000", 999, "999"].forEach(function (code) {
+      assert.strictEqual(countries.byIso(code), null);
+    });
+  });
+
   it("finds countries by internet code", function () {
     var uk = countries.byInternet("UK");
     assert(uk, "no country");
@@ -113,6 +137,52 @@ describe("country code", function () {
     assert.strictEqual(kosovo.iso3, "XKX");
   });
 
+  [
+    ["CV", "country", "Cabo Verde"],
+    ["YT", "capital", "Mamoudzou"],
+    ["FM", "fips", "FM"],
+    ["MM", "capital", "Naypyidaw"],
+    ["PW", "capital", "Ngerulmud"],
+    ["ZA", "capital", "Pretoria"],
+    ["TZ", "capital", "Dodoma"],
+    ["VE", "internet", "VE"],
+    ["WS", "country", "Samoa"],
+    ["CD", "internet", "CD"],
+    ["TF", "internet", "TF"],
+    ["SH", "capital", "Jamestown"],
+    ["AX", "fips", ""],
+    ["BQ", "fips", ""]
+  ].forEach(function (correction) {
+    it("uses the corrected " + correction[1] + " for " + correction[0], function () {
+      assert.strictEqual(countries.byIso(correction[0])[correction[1]], correction[2]);
+    });
+  });
+
+  it("finds Micronesia by FIPS without treating ISO-only codes as FIPS", function () {
+    assert.strictEqual(countries.byFips("FM"), countries.byIso("FM"));
+    assert.strictEqual(countries.byFips("fm"), countries.byIso("FM"));
+    ["AX", "ax", "BQ", "bq"].forEach(function (code) {
+      assert.strictEqual(countries.byFips(code), null);
+    });
+  });
+
+  it("finds corrected internet codes and rejects the obsolete values", function () {
+    ["VE", "CD", "TF"].forEach(function (code) {
+      assert.strictEqual(countries.byInternet(code), countries.byIso(code));
+      assert.strictEqual(countries.byInternet(code.toLowerCase()), countries.byIso(code));
+    });
+    ["UE", "ZR", "--"].forEach(function (code) {
+      assert.strictEqual(countries.byInternet(code), null);
+    });
+  });
+
+  it("finds the updated country names and rejects the old names", function () {
+    assert.strictEqual(countries.byCountry("Cabo Verde"), countries.byIso("CV"));
+    assert.strictEqual(countries.byCountry("Samoa"), countries.byIso("WS"));
+    assert.strictEqual(countries.byCountry("Cape Verde"), null);
+    assert.strictEqual(countries.byCountry("Western Samoa"), null);
+  });
+
   // null/undefined input guards
   it("byFips returns null for null/undefined/non-string input", function () {
     assert.strictEqual(countries.byFips(null), null);
@@ -123,6 +193,12 @@ describe("country code", function () {
   it("byIso returns null for null/undefined", function () {
     assert.strictEqual(countries.byIso(null), null);
     assert.strictEqual(countries.byIso(undefined), null);
+  });
+
+  it("byIso returns null for non-string/non-number input without coercion", function () {
+    [true, [826], { toString: function () { return "826"; } }, 826n, Symbol("826")].forEach(function (code) {
+      assert.strictEqual(countries.byIso(code), null);
+    });
   });
 
   it("byInternet returns null for null/undefined/non-string input", function () {
