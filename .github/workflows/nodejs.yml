@@ -31,13 +31,16 @@ jobs:
     needs: build
     if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
     steps:
     - uses: actions/checkout@v7
     - uses: actions/setup-node@v7
       with:
         node-version: 24.x
-        registry-url: https://registry.npmjs.org
+        package-manager-cache: false
+    - name: Install npm with trusted publishing support
+      run: npm install --global npm@11
     - name: npm publish
       run: npm publish
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.API_KEY }}
