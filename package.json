@@ -1,6 +1,6 @@
 {
   "name": "country-code-lookup",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "description": "Finds countries by various country codes",
   "main": "index.js",
   "types": "./index.d.ts",

@@ -441,7 +441,7 @@ var countries = [
   {
     continent: 'Africa',
     region: 'Western Africa',
-    country: 'Cape Verde',
+    country: 'Cabo Verde',
     capital: 'Praia',
     fips: 'CV',
     iso2: 'CV',
@@ -1476,7 +1476,7 @@ var countries = [
     continent: 'Africa',
     region: 'Indian Ocean',
     country: 'Mayotte',
-    capital: 'Mamoutzou',
+    capital: 'Mamoudzou',
     fips: 'MF',
     iso2: 'YT',
     iso3: 'MYT',
@@ -1499,7 +1499,7 @@ var countries = [
     region: 'Pacific',
     country: 'Federated States of Micronesia',
     capital: 'Palikir',
-    fips: '',
+    fips: 'FM',
     iso2: 'FM',
     iso3: 'FSM',
     isoNo: '583',
@@ -1575,7 +1575,7 @@ var countries = [
     continent: 'Asia',
     region: 'South East Asia',
     country: 'Myanmar (Burma)',
-    capital: 'Rangoon (Yangon)',
+    capital: 'Naypyidaw',
     fips: 'BM',
     iso2: 'MM',
     iso3: 'MMR',
@@ -1762,7 +1762,7 @@ var countries = [
     continent: 'Oceania',
     region: 'Pacific',
     country: 'Palau',
-    capital: 'Koror',
+    capital: 'Ngerulmud',
     fips: 'PS',
     iso2: 'PW',
     iso3: 'PLW',
@@ -2103,7 +2103,7 @@ var countries = [
     continent: 'Africa',
     region: 'Southern Africa',
     country: 'South Africa',
-    capital: 'Pretoria��',
+    capital: 'Pretoria',
     fips: 'SF',
     iso2: 'ZA',
     iso3: 'ZAF',
@@ -2235,7 +2235,7 @@ var countries = [
     continent: 'Africa',
     region: 'Eastern Africa',
     country: 'Tanzania',
-    capital: 'Dar es Salaam',
+    capital: 'Dodoma',
     fips: 'TZ',
     iso2: 'TZ',
     iso3: 'TZA',
@@ -2460,7 +2460,7 @@ var countries = [
     iso2: 'VE',
     iso3: 'VEN',
     isoNo: '862',
-    internet: 'UE'
+    internet: 'VE'
   },
   {
     continent: 'Asia',
@@ -2509,7 +2509,7 @@ var countries = [
   {
     continent: 'Oceania',
     region: 'Pacific',
-    country: 'Western Samoa',
+    country: 'Samoa',
     capital: 'Apia',
     fips: 'WS',
     iso2: 'WS',
@@ -2537,7 +2537,7 @@ var countries = [
     iso2: 'CD',
     iso3: 'COD',
     isoNo: '180',
-    internet: 'ZR'
+    internet: 'CD'
   },
   {
     continent: 'Africa',
@@ -2625,7 +2625,7 @@ var countries = [
     iso2: 'TF',
     iso3: 'ATF',
     isoNo: '260',
-    internet: '--'
+    internet: 'TF'
   },
   {
     continent: 'Indian Ocean',
@@ -2642,7 +2642,7 @@ var countries = [
     continent: 'Atlantic Ocean',
     region: 'South Atlantic Ocean',
     country: 'Saint Helena',
-    capital: '',
+    capital: 'Jamestown',
     fips: 'SH',
     iso2: 'SH',
     iso3: 'SHN',
@@ -2775,7 +2775,7 @@ var countries = [
     region: 'Northern Europe',
     country: 'Åland Islands',
     capital: 'Mariehamn',
-    fips: 'AX',
+    fips: '',
     iso2: 'AX',
     iso3: 'ALA',
     isoNo: '248',
@@ -2786,7 +2786,7 @@ var countries = [
     region: 'West Indies',
     country: 'Bonaire',
     capital: 'Kralendijk',
-    fips: 'BQ',
+    fips: '',
     iso2: 'BQ',
     iso3: 'BES',
     isoNo: '535',
