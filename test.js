@@ -143,7 +143,7 @@ describe("country code", function () {
     ["FM", "fips", "FM"],
     ["MM", "capital", "Naypyidaw"],
     ["PW", "capital", "Ngerulmud"],
-    ["ZA", "capital", "Pretoria"],
+    ["ZA", "capital", "Pretoria / Cape Town / Bloemfontein"],
     ["TZ", "capital", "Dodoma"],
     ["VE", "internet", "VE"],
     ["WS", "country", "Samoa"],
@@ -181,6 +181,93 @@ describe("country code", function () {
     assert.strictEqual(countries.byCountry("Samoa"), countries.byIso("WS"));
     assert.strictEqual(countries.byCountry("Cape Verde"), null);
     assert.strictEqual(countries.byCountry("Western Samoa"), null);
+  });
+
+  it("rejects the retired Netherlands Antilles codes and retains its successors", function () {
+    ["AN", "ANT", 530].forEach(function (code) {
+      assert.strictEqual(countries.byIso(code), null);
+    });
+    assert.strictEqual(countries.byFips("NT"), null);
+    assert.strictEqual(countries.byInternet("AN"), null);
+    assert.strictEqual(countries.byCountry("Netherlands Antilles"), null);
+    ["CW", "SX", "BQ"].forEach(function (code) {
+      assert(countries.byIso(code));
+    });
+  });
+
+  it("uses legacy FIPS codes rather than incorrect or ISO-only codes", function () {
+    [["FK", "FK", "FA"], ["VN", "VM", "VN"]].forEach(function (codes) {
+      assert.strictEqual(countries.byFips(codes[1]), countries.byIso(codes[0]));
+      assert.strictEqual(countries.byFips(codes[1].toLowerCase()), countries.byIso(codes[0]));
+      assert.strictEqual(countries.byFips(codes[2]), null);
+    });
+  });
+
+  it("distinguishes eligible internet codes from unofficial and empty codes", function () {
+    assert.strictEqual(countries.byInternet("US"), countries.byIso("US"));
+    assert.strictEqual(countries.byInternet("um"), countries.byIso("UM"));
+    assert.strictEqual(countries.byInternet("XK"), null);
+    assert.strictEqual(countries.byIso("XK").internet, "");
+    assert.strictEqual(countries.byInternet(""), null);
+    assert.strictEqual(countries.byFips(""), null);
+  });
+
+  [
+    ["BQ", "Bonaire, Sint Eustatius and Saba"],
+    ["SJ", "Svalbard and Jan Mayen"],
+    ["SH", "Saint Helena, Ascension and Tristan da Cunha"],
+    ["PS", "State of Palestine"],
+    ["TR", "Türkiye"],
+    ["VI", "United States Virgin Islands"]
+  ].forEach(function (entry) {
+    it("finds the current full country or territory name for " + entry[0], function () {
+      assert.strictEqual(countries.byCountry(entry[1]), countries.byIso(entry[0]));
+    });
+  });
+
+  [
+    ["GE", "Tbilisi"],
+    ["GT", "Guatemala City"],
+    ["KZ", "Astana"],
+    ["KI", "South Tarawa"],
+    ["KW", "Kuwait City"],
+    ["MX", "Mexico City"],
+    ["PA", "Panama City"],
+    ["LK", "Sri Jayewardenepura Kotte / Colombo"],
+    ["SZ", "Mbabane / Lobamba"],
+    ["TC", "Cockburn Town"],
+    ["UM", ""],
+    ["BQ", "Kralendijk / Oranjestad / The Bottom"]
+  ].forEach(function (entry) {
+    it("uses the corrected capital or administrative centres for " + entry[0], function () {
+      assert.strictEqual(countries.byIso(entry[0]).capital, entry[1]);
+    });
+  });
+
+  [
+    ["AO", "Africa", "Central Africa"],
+    ["BI", "Africa", "Eastern Africa"],
+    ["CM", "Africa", "Central Africa"],
+    ["GQ", "Africa", "Central Africa"],
+    ["GA", "Africa", "Central Africa"],
+    ["MW", "Africa", "Eastern Africa"],
+    ["MZ", "Africa", "Eastern Africa"],
+    ["RW", "Africa", "Eastern Africa"],
+    ["ST", "Africa", "Central Africa"],
+    ["SS", "Africa", "Eastern Africa"],
+    ["ZM", "Africa", "Eastern Africa"],
+    ["ZW", "Africa", "Eastern Africa"],
+    ["MN", "Asia", "East Asia"],
+    ["RU", "Europe", "Eastern Europe"],
+    ["CX", "Oceania", "Indian Ocean"],
+    ["CC", "Oceania", "Indian Ocean"],
+    ["UM", "Oceania", "Pacific"]
+  ].forEach(function (entry) {
+    it("uses the corrected geographic classification for " + entry[0], function () {
+      var country = countries.byIso(entry[0]);
+      assert.strictEqual(country.continent, entry[1]);
+      assert.strictEqual(country.region, entry[2]);
+    });
   });
 
   // null/undefined input guards
