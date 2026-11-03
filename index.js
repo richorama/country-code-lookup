@@ -33,6 +33,7 @@ module.exports.byCountry = function(country) {
 }
 
 function search(field, code) {
+  if (code === '') return null
   for (var i = 0; i < countries.length; i++) {
     if (countries[i][field] === code) {
       return countries[i]
@@ -99,7 +100,7 @@ var countries = [
   },
   {
     continent: 'Africa',
-    region: 'Southern Africa',
+    region: 'Central Africa',
     country: 'Angola',
     capital: 'Luanda',
     fips: 'AO',
@@ -396,7 +397,7 @@ var countries = [
   },
   {
     continent: 'Africa',
-    region: 'Central Africa',
+    region: 'Eastern Africa',
     country: 'Burundi',
     capital: 'Gitega',
     fips: 'BY',
@@ -418,7 +419,7 @@ var countries = [
   },
   {
     continent: 'Africa',
-    region: 'Western Africa',
+    region: 'Central Africa',
     country: 'Cameroon',
     capital: 'Yaounde',
     fips: 'CM',
@@ -505,8 +506,8 @@ var countries = [
     internet: 'CN'
   },
   {
-    continent: 'Asia',
-    region: 'South East Asia',
+    continent: 'Oceania',
+    region: 'Indian Ocean',
     country: 'Christmas Island',
     capital: 'The Settlement',
     fips: 'KT',
@@ -516,8 +517,8 @@ var countries = [
     internet: 'CX'
   },
   {
-    continent: 'Asia',
-    region: 'South East Asia',
+    continent: 'Oceania',
+    region: 'Indian Ocean',
     country: 'Cocos (Keeling) Islands',
     capital: 'West Island',
     fips: 'CK',
@@ -715,7 +716,7 @@ var countries = [
   },
   {
     continent: 'Africa',
-    region: 'Western Africa',
+    region: 'Central Africa',
     country: 'Equatorial Guinea',
     capital: 'Ciudad de la Paz',
     fips: 'EK',
@@ -762,7 +763,7 @@ var countries = [
     region: 'South America',
     country: 'Falkland Islands (Islas Malvinas)',
     capital: 'Stanley',
-    fips: 'FA',
+    fips: 'FK',
     iso2: 'FK',
     iso3: 'FLK',
     isoNo: '238',
@@ -836,7 +837,7 @@ var countries = [
   },
   {
     continent: 'Africa',
-    region: 'Western Africa',
+    region: 'Central Africa',
     country: 'Gabon',
     capital: 'Libreville',
     fips: 'GB',
@@ -860,7 +861,7 @@ var countries = [
     continent: 'Asia',
     region: 'South West Asia',
     country: 'Georgia',
-    capital: "T'bilisi",
+    capital: 'Tbilisi',
     fips: 'GG',
     iso2: 'GE',
     iso3: 'GEO',
@@ -959,7 +960,7 @@ var countries = [
     continent: 'Americas',
     region: 'Central America',
     country: 'Guatemala',
-    capital: 'Guatemala',
+    capital: 'Guatemala City',
     fips: 'GT',
     iso2: 'GT',
     iso3: 'GTM',
@@ -1168,7 +1169,7 @@ var countries = [
     continent: 'Asia',
     region: 'Central Asia',
     country: 'Kazakhstan',
-    capital: 'Astana (Akmola)',
+    capital: 'Astana',
     fips: 'KZ',
     iso2: 'KZ',
     iso3: 'KAZ',
@@ -1190,7 +1191,7 @@ var countries = [
     continent: 'Oceania',
     region: 'Pacific',
     country: 'Kiribati',
-    capital: 'Tarawa',
+    capital: 'South Tarawa',
     fips: 'KR',
     iso2: 'KI',
     iso3: 'KIR',
@@ -1223,7 +1224,7 @@ var countries = [
     continent: 'Asia',
     region: 'South West Asia',
     country: 'Kuwait',
-    capital: 'Kuwait',
+    capital: 'Kuwait City',
     fips: 'KU',
     iso2: 'KW',
     iso3: 'KWT',
@@ -1364,7 +1365,7 @@ var countries = [
   },
   {
     continent: 'Africa',
-    region: 'Southern Africa',
+    region: 'Eastern Africa',
     country: 'Malawi',
     capital: 'Lilongwe',
     fips: 'MI',
@@ -1487,7 +1488,7 @@ var countries = [
     continent: 'Americas',
     region: 'Central America',
     country: 'Mexico',
-    capital: 'Mexico',
+    capital: 'Mexico City',
     fips: 'MX',
     iso2: 'MX',
     iso3: 'MEX',
@@ -1529,7 +1530,7 @@ var countries = [
   },
   {
     continent: 'Asia',
-    region: 'Northern Asia',
+    region: 'East Asia',
     country: 'Mongolia',
     capital: 'Ulaanbaatar',
     fips: 'MG',
@@ -1562,7 +1563,7 @@ var countries = [
   },
   {
     continent: 'Africa',
-    region: 'Southern Africa',
+    region: 'Eastern Africa',
     country: 'Mozambique',
     capital: 'Maputo',
     fips: 'MZ',
@@ -1625,17 +1626,6 @@ var countries = [
     iso3: 'NLD',
     isoNo: '528',
     internet: 'NL'
-  },
-  {
-    continent: 'Americas',
-    region: 'West Indies',
-    country: 'Netherlands Antilles',
-    capital: 'Willemstad',
-    fips: 'NT',
-    iso2: 'AN',
-    iso3: 'ANT',
-    isoNo: '530',
-    internet: 'AN'
   },
   {
     continent: 'Oceania',
@@ -1772,7 +1762,7 @@ var countries = [
   {
     continent: 'Asia',
     region: 'South West Asia',
-    country: 'Palestinian Territory',
+    country: 'State of Palestine',
     capital: 'East Jerusalem',
     fips: 'WE',
     iso2: 'PS',
@@ -1784,7 +1774,7 @@ var countries = [
     continent: 'Americas',
     region: 'Central America',
     country: 'Panama',
-    capital: 'Panama',
+    capital: 'Panama City',
     fips: 'PM',
     iso2: 'PA',
     iso3: 'PAN',
@@ -1913,8 +1903,8 @@ var countries = [
     internet: 'RO'
   },
   {
-    continent: 'Asia',
-    region: 'Northern Asia',
+    continent: 'Europe',
+    region: 'Eastern Europe',
     country: 'Russia',
     capital: 'Moscow',
     fips: 'RS',
@@ -1925,7 +1915,7 @@ var countries = [
   },
   {
     continent: 'Africa',
-    region: 'Central Africa',
+    region: 'Eastern Africa',
     country: 'Rwanda',
     capital: 'Kigali',
     fips: 'RW',
@@ -1991,7 +1981,7 @@ var countries = [
   },
   {
     continent: 'Africa',
-    region: 'Western Africa',
+    region: 'Central Africa',
     country: 'Sao Tome and Principe',
     capital: 'Sao Tome',
     fips: 'TP',
@@ -2103,7 +2093,7 @@ var countries = [
     continent: 'Africa',
     region: 'Southern Africa',
     country: 'South Africa',
-    capital: 'Pretoria',
+    capital: 'Pretoria / Cape Town / Bloemfontein',
     fips: 'SF',
     iso2: 'ZA',
     iso3: 'ZAF',
@@ -2125,7 +2115,7 @@ var countries = [
     continent: 'Asia',
     region: 'South Asia',
     country: 'Sri Lanka',
-    capital: 'Colombo',
+    capital: 'Sri Jayewardenepura Kotte / Colombo',
     fips: 'CE',
     iso2: 'LK',
     iso3: 'LKA',
@@ -2157,7 +2147,7 @@ var countries = [
   {
     continent: 'Europe',
     region: 'Northern Europe',
-    country: 'Svalbard',
+    country: 'Svalbard and Jan Mayen',
     capital: 'Longyearbyen',
     fips: 'SV',
     iso2: 'SJ',
@@ -2169,7 +2159,7 @@ var countries = [
     continent: 'Africa',
     region: 'Southern Africa',
     country: 'Eswatini',
-    capital: 'Mbabane',
+    capital: 'Mbabane / Lobamba',
     fips: 'WZ',
     iso2: 'SZ',
     iso3: 'SWZ',
@@ -2311,7 +2301,7 @@ var countries = [
   {
     continent: 'Asia',
     region: 'South West Asia',
-    country: 'Turkiye',
+    country: 'Türkiye',
     capital: 'Ankara',
     fips: 'TU',
     iso2: 'TR',
@@ -2334,7 +2324,7 @@ var countries = [
     continent: 'Americas',
     region: 'West Indies',
     country: 'Turks and Caicos Islands',
-    capital: 'Grand Turk',
+    capital: 'Cockburn Town',
     fips: 'TK',
     iso2: 'TC',
     iso3: 'TCA',
@@ -2408,15 +2398,15 @@ var countries = [
     internet: 'US'
   },
   {
-    continent: 'Americas',
-    region: 'North America',
+    continent: 'Oceania',
+    region: 'Pacific',
     country: 'United States Minor Outlying Islands',
-    capital: 'Washington DC',
+    capital: '',
     fips: '',
     iso2: 'UM',
     iso3: 'UMI',
     isoNo: '581',
-    internet: 'US'
+    internet: 'UM'
   },
   {
     continent: 'Americas',
@@ -2467,7 +2457,7 @@ var countries = [
     region: 'South East Asia',
     country: 'Vietnam',
     capital: 'Hanoi',
-    fips: 'VN',
+    fips: 'VM',
     iso2: 'VN',
     iso3: 'VNM',
     isoNo: '704',
@@ -2476,7 +2466,7 @@ var countries = [
   {
     continent: 'Americas',
     region: 'West Indies',
-    country: 'Virgin Islands',
+    country: 'United States Virgin Islands',
     capital: 'Charlotte Amalie',
     fips: 'VQ',
     iso2: 'VI',
@@ -2541,7 +2531,7 @@ var countries = [
   },
   {
     continent: 'Africa',
-    region: 'Southern Africa',
+    region: 'Eastern Africa',
     country: 'Zambia',
     capital: 'Lusaka',
     fips: 'ZA',
@@ -2552,7 +2542,7 @@ var countries = [
   },
   {
     continent: 'Africa',
-    region: 'Southern Africa',
+    region: 'Eastern Africa',
     country: 'Zimbabwe',
     capital: 'Harare',
     fips: 'ZI',
@@ -2641,7 +2631,7 @@ var countries = [
   {
     continent: 'Atlantic Ocean',
     region: 'South Atlantic Ocean',
-    country: 'Saint Helena',
+    country: 'Saint Helena, Ascension and Tristan da Cunha',
     capital: 'Jamestown',
     fips: 'SH',
     iso2: 'SH',
@@ -2761,7 +2751,7 @@ var countries = [
   },
   {
     continent: 'Africa',
-    region: 'Northern Africa',
+    region: 'Eastern Africa',
     country: 'South Sudan',
     capital: 'Juba',
     fips: 'OD',
@@ -2784,8 +2774,8 @@ var countries = [
   {
     continent: 'Americas',
     region: 'West Indies',
-    country: 'Bonaire',
-    capital: 'Kralendijk',
+    country: 'Bonaire, Sint Eustatius and Saba',
+    capital: 'Kralendijk / Oranjestad / The Bottom',
     fips: '',
     iso2: 'BQ',
     iso3: 'BES',
@@ -2801,7 +2791,7 @@ var countries = [
     iso2: 'XK',
     iso3: 'XKX',
     isoNo: null,
-    internet: 'XK'
+    internet: ''
   },
 ]
 
